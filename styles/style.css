@@ -17,4 +17,61 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: 'wdth' var(--card-text-weight, 400);
+  color: var(--accent-color, rgb(0, 0, 0));
+  background-color: var( --bg-color, rgb(255, 255, 255));
+  background-image:  repeating-linear-gradient(180deg, #d3d3d3 , transparent 2px),repeating-linear-gradient(90deg, #d3d3d3 , transparent 2px),repeating-linear-gradient(#e7e7e7 , #1a1a1a) ;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin-block-start: 100px;
+  min-block-size: 327px;
+  background-color: var( --bg-color, rgb(255, 255, 255)); 
+  font-family: var(--accent-font, sans-serif);
+}
+
+.header__title {
+  margin-block-start: 120px;
+  margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 25px;
+}
+
+.theme-menu {
+  min-block-size: 70px;
+
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 14px;
+  align-items: center;
+    justify-items: center;
+    align-content: center;
+   
+
+}
+
+.theme-menu__button {
+  font-size: 14px;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
 }
