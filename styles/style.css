@@ -53,25 +53,63 @@
 
 .theme-menu {
   min-block-size: 70px;
-
 }
 
 .theme-menu__list {
   display: grid;
-  gap: 14px;
-  align-items: center;
-    justify-items: center;
-    align-content: center;
+  gap: 8px;
+  padding-inline-start: 20px;
+  align-content: center;
    
 
 }
 
 .theme-menu__button {
+  position: relative;
   font-size: 14px;
   text-align: center;
   background-color: inherit;
+  transition: transform 0.3s ease;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  appearance: none;
 
+}
+.theme-menu__button:not(:disabled)::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 2px;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+  inset-inline-start: -20px;
+ 
 }
