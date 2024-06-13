@@ -50,16 +50,19 @@
       <ul class="content__list">
         <li class="content__list_item">
           <article class="card">
-            <div class="card__content">
               <h3 class="card__title">
                 Фритрек и нулевой спринт: Подготовка к работе
               </h3>
+              <div class="card__image-wrapper">
+                <span class="card__image-label">&lt;/HTML&gt;</span>
               <img
                 loading="lazy"
                 src="./images/image.jpg"
                 alt="фургон ночью у дерева"
                 class="card-images"
               />
+              </div>
+              <div class="card__content">
               <p class="card__text">
                 Это было самое начало пути. На этом этапе важно было
                 проникнуться основами и настроиться на учёбу. И, возможно,
@@ -67,14 +70,13 @@
               </p>
               <p class="card__text">
                 Место для ваших воспоминаний о начале обучения.
-              </p>
-              <button class="heart">
+              </p></div>
+              <button class="card__icon-button is-liked">
                 <img src="./svg/heart in paths.svg" />
               </button>
-              <button class="like">
+              <button class="card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </div>
           </article>
         </li>
       </ul>
@@ -82,7 +84,7 @@
     <footer>
       <button>
         <span class="button__text">Сохранить на память</span>
-        <svg class="modal__icon" viewBox="0 0 29 28">
+        <svg class="modal__icon" viewbox="0 0 29 28">
           <use href="svg/floppy.svg#floppy" />
         </svg>
       </button>
