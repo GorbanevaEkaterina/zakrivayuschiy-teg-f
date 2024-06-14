@@ -18,15 +18,15 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wdth' var(--card-text-weight, 400);
+  font-variation-settings: "wdth" var(--card-text-weight, 400);
   color: var(--accent-color, rgb(0, 0, 0));
-  background-color: var( --bg-color, rgb(255, 255, 255));
-  background-image:  repeating-linear-gradient(180deg, #d3d3d3 , transparent 2px),repeating-linear-gradient(90deg, #d3d3d3 , transparent 2px),repeating-linear-gradient(#e7e7e7 , #1a1a1a) ;
+  background-color: var(--bg-color, rgb(255, 255, 255));
+  background-image: repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    repeating-linear-gradient(#e7e7e7, #1a1a1a);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  
-
 }
 
 .header {
@@ -37,7 +37,7 @@
   margin-block-start: 100px;
   margin-block-end: 100px;
   min-block-size: 327px;
-  background-color: var( --bg-color, rgb(255, 255, 255)); 
+  background-color: var(--bg-color, rgb(255, 255, 255));
   font-family: var(--accent-font, sans-serif);
 }
 
@@ -61,8 +61,6 @@
   gap: 8px;
   padding-inline-start: 20px;
   align-content: center;
-   
-
 }
 
 .theme-menu__button {
@@ -75,7 +73,6 @@
   cursor: pointer;
   text-transform: uppercase;
   appearance: none;
-
 }
 .theme-menu__button:not(:disabled)::after {
   content: "";
@@ -112,7 +109,6 @@
   position: absolute;
   animation: arrow 0.5s ease-in-out infinite alternate;
   inset-inline-start: -20px;
- 
 }
 
 .content {
@@ -128,27 +124,26 @@
 
 .card {
   border: 2px solid var(--accent-color, #000);
-  background: var( --bg-color, #fff);
+  background: var(--bg-color, #fff);
   max-inline-size: 696px;
 }
 .card__image-wrapper {
   position: relative;
- 
-} 
+}
 
 .card__image-label {
   position: absolute;
   z-index: 1;
-   opacity: 0.5;
- color: var(--accent-color, #000);
+  opacity: 0.5;
+  color: var(--accent-color, #000);
   font-family: var(--accent-font, "PressStart2P");
- font-size: 14px;
+  font-size: 14px;
   line-height: normal;
-text-transform: uppercase;
+  text-transform: uppercase;
   text-shadow: 0 0 1px var(--bg-color, #fff);
   inset-inline-end: 13px;
   inset-block-start: 24px;
-mix-blend-mode: hard-light;
+  mix-blend-mode: hard-light;
 }
 .card__title {
   border-block-end: 2px solid var(--accent-color, #000);
@@ -169,8 +164,6 @@ mix-blend-mode: hard-light;
   gap: 27px;
   border-block-start: 2px solid var(--accent-color, #000);
   padding: 25px 30px 0 25px;
-  
-
 }
 .card__text {
   font-size: 18px;
@@ -181,7 +174,7 @@ mix-blend-mode: hard-light;
   display: flex;
   justify-content: end;
   align-items: stretch;
-  gap: 16px;
+  gap: 6px;
   padding: 25px 25px 23px 25px;
 }
 .card__icon-button {
@@ -192,22 +185,64 @@ mix-blend-mode: hard-light;
   transition: border-color 0.3s ease;
   cursor: pointer;
   appearance: none;
-  inline-size: 27px;
-  block-size: 25px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color, #000);
 }
 .like-icon {
   block-size: 36px;
-  inline-size: 39px;}
+  inline-size: 39px;
+}
 
 .card__like-button {
+  position: relative;
+  z-index: 1;
   border: 2px solid var(--accent-color, #000);
   background-color: transparent;
   padding: 8px 32px;
-  
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  text-transform: inherit;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--accent-color, #000);
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent-color, #000000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.card__like-button:hover::before {
+  transform: scaleX(1);
+}
+
+.card__like-button:hover .button__text {
+  color: var(--bg-color, #fff);
+  mix-blend-mode: difference;
 }
 .button__text {
   font-family: var(--accent-font, "PressStart2P");
   text-align: center;
+  color: var(--accent-color, #000);
 }
 .modal__icon {
   flex-shrink: 0;
