@@ -125,8 +125,7 @@
   display: grid;
   gap: 52px;
 }
-.content__list_item {
-}
+
 .card {
   border: 2px solid var(--accent-color, #000);
   background: var( --bg-color, #fff);
@@ -177,13 +176,38 @@ mix-blend-mode: hard-light;
   font-size: 18px;
   line-height: calc(21 / 18);
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: stretch;
+  gap: 16px;
+  padding: 25px 25px 23px 25px;
+}
 .card__icon-button {
+  display: grid;
+  border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+  inline-size: 27px;
+  block-size: 25px;
 }
-.is-liked {
-}
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;}
+
 .card__like-button {
+  border: 2px solid var(--accent-color, #000);
+  background-color: transparent;
+  padding: 8px 32px;
+  
 }
 .button__text {
+  font-family: var(--accent-font, "PressStart2P");
+  text-align: center;
 }
 .modal__icon {
   flex-shrink: 0;

@@ -6,4 +6,7 @@
     --card-title-weight:700;
     --bg-color: rgb(255, 255, 255);
     --accent-color: rgb(0, 0, 0);
+    --like-contour-color: rgb(0, 0, 0);
+    --like-body-color: none;
+    --like-sparks-color: #ff0000;
   }
