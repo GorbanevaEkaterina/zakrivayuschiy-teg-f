@@ -21,9 +21,12 @@
   font-variation-settings: "wdth" var(--card-text-weight, 400);
   color: var(--accent-color, rgb(0, 0, 0));
   background-color: var(--bg-color, rgb(255, 255, 255));
-  background-image: repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
+  background-image: var(
+    --bg-images,
+    repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
     repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-    repeating-linear-gradient(#e7e7e7, #1a1a1a);
+    repeating-linear-gradient(90deg, #e7e7e7 0.01%, #1a1a1a)
+  );
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -208,6 +211,13 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   text-transform: inherit;
+
+  font-family: var(--accent-font, "PressStart2P");
+  font-size: 14px;
+  text-transform: inherit;
+  background: var(--bg-color, #fff);
+
+  appearance: none;
 }
 
 .card__like-button:focus {
@@ -223,7 +233,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--accent-color, #000000);
+  background: var(--accent-color, #000);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -235,14 +245,72 @@
   transform: scaleX(1);
 }
 
-.card__like-button:hover .button__text {
-  color: var(--bg-color, #fff);
-  mix-blend-mode: difference;
-}
 .button__text {
   font-family: var(--accent-font, "PressStart2P");
   text-align: center;
-  color: var(--accent-color, #000);
+  color: var(--text-color, #fff);
+  mix-blend-mode: difference;
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  min-inline-size: 306px;
+  min-block-size: 55px;
+}
+.button__footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-block-start: 15px;
+  padding-block-end: 15px;
+  gap: 8px;
+  outline: 2px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
+}
+.button__icon {
+  flex-shrink: 0;
+  inline-size: 28px;
+  block-size: 28px;
+  color: var(--text-color, #fff);
+  mix-blend-mode: difference;
+}
+.modal {
+  border: 2px solid var(--accent-color, #000000);
+  padding: 25px 30px;
+  color: var(--accent-color, #000000);
+  font-family: var(--accent-font, "PressStart2P");
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--bg-color, #fff);
+  max-inline-size: 355px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal[open] {
+  display: grid;
+  gap: 30px;
+}
+
+.modal::backdrop {
+  opacity: 0.75;
+  background: var(--bg-color, #fff);
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.modal__button {
+  font-size: 14px;
+  block-size: 38px;
+  inline-size: 100%;
+  border: 2px solid var(--accent-color, #000000);
+  background: var(--bg-color, #fff);
 }
 .modal__icon {
   flex-shrink: 0;

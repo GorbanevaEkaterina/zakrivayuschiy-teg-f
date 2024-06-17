@@ -6,7 +6,11 @@
     --card-title-weight:700;
     --bg-color: rgb(255, 255, 255);
     --accent-color: rgb(0, 0, 0);
-    --like-contour-color: rgb(0, 0, 0);
+    --text-color: var(--bg-color);
+    --like-contour-color:var(--accent-color,rgb(0, 0, 0));
     --like-body-color: none;
     --like-sparks-color: #ff0000;
+    --bg-images: repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #e7e7e7 0.01%, #1a1a1a);
   }
