@@ -1,16 +1,20 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font: "Inter-Variable";
-    --accent-font:'PressStart2P';
-    --card-text-weight: 400;
-    --card-title-weight:700;
-    --bg-color: rgb(255, 255, 255);
-    --accent-color: rgb(0, 0, 0);
-    --text-color: var(--bg-color);
-    --like-contour-color:var(--accent-color,rgb(0, 0, 0));
-    --like-body-color: none;
-    --like-sparks-color: #ff0000;
-    --bg-images: repeating-linear-gradient(180deg, #d3d3d3, transparent 2px),
-    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-    repeating-linear-gradient(90deg, #e7e7e7 0.01%, #1a1a1a);
-  }
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --card-text-weight: 400;
+  --card-title-weight: 700;
+  --bg-color: rgb(255, 255, 255);
+  --accent-color: rgb(0, 0, 0);
+  --text-color: var(--bg-color, rgb(255, 255, 255));
+  --like-contour-color: var(--accent-color, rgb(0, 0, 0));
+  --like-body-color: none;
+  --like-sparks-color: rgb(255, 0, 0);
+  --bg-images: repeating-linear-gradient(
+      180deg,
+      rgb(211, 211, 211),
+      transparent 2px
+    ),
+    repeating-linear-gradient(90deg, rgb(211, 211, 211), transparent 2px),
+    repeating-linear-gradient(90deg, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26));
+}
