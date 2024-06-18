@@ -9,11 +9,9 @@
 }
 
 @font-face {
-  font-display: swap;
-  font-family: "Inter";
-  src: 
-  local("Inter"),
-    url("./Inter-Variable.woff2") format("woff2 supports variations"),
-    url("./Inter-Variable.woff2") format("woff2-variations");
-  font-variation-settings:"wght" 400 785;
-}
+    font-family: Inter-Variable;
+    font-display: swap;
+    src: url(/fonts/Inter-Variable.woff2) format('woff2 supports variations'),
+    url(/fonts/Inter-Variable.woff2) format('woff2-variations');
+    font-weight: 400 785; 
+  }
