@@ -360,3 +360,31 @@
     inline-size: 28px;
   }
 }
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
+.multiple {
+  filter: contrast(55%) hue-rotate(45deg) saturate(230%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(250deg);
+}
+
+.saturate {
+  filter: saturate(300%);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.sepia {
+  filter: sepia(75%);
+}
+
+.blur {
+  filter: blur(15px);
+}
