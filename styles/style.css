@@ -235,7 +235,6 @@
   text-transform: inherit;
   font-family: var(--accent-font, "PressStart2P");
   font-size: 14px;
-  text-transform: inherit;
   background: var(--bg-color, rgb(255, 255, 255));
   appearance: none;
 }
