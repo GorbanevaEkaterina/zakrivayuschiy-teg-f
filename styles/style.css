@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font,"Inter", sans-serif);
   font-variation-settings: "wdth" var(--card-text-weight, 400);
   color: var(--accent-color, rgb(0, 0, 0));
   background-color: var(--bg-color, rgb(255, 255, 255));
@@ -164,6 +164,7 @@
 }
 
 .card__title {
+  font-family: var(--main-font,"Inter", sans-serif);
   border-block-end: 2px solid var(--accent-color, rgb(0, 0, 0));
   padding: 5px 10px;
   font-size: 18px;
