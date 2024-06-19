@@ -17,16 +17,11 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font,"Inter", sans-serif);
+  font-family: var(--main-font, "Inter", sans-serif);
   font-variation-settings: "wght" var(--card-text-weight, 400);
   color: var(--accent-color, rgb(0, 0, 0));
   background-color: var(--bg-color, rgb(255, 255, 255));
-  background-image: var(
-    --bg-images,
-    repeating-linear-gradient(180deg, rgb(211, 211, 211), transparent 2px),
-    repeating-linear-gradient(90deg, rgb(211, 211, 211), transparent 2px),
-    repeating-linear-gradient(90deg, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26))
-  );
+  background-image: var(--bg-images, none);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -164,7 +159,7 @@
 }
 
 .card__title {
-  font-family: var(--main-font,"Inter-Variable", sans-serif);
+  font-family: var(--main-font, "Inter-Variable", sans-serif);
   border-block-end: 2px solid var(--accent-color, rgb(0, 0, 0));
   padding: 5px 10px;
   font-size: 18px;
