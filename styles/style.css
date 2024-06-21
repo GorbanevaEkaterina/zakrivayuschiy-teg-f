@@ -33,7 +33,7 @@
   justify-items: center;
   justify-content: center;
   font-family: var(--accent-font, "PressStart2P"), fantasy;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   margin-inline: auto;
   border: 2px solid var(--accent-color, rgb(0, 0, 0));
   background-color: var(--bg-color, rgb(255, 255, 255));
@@ -132,7 +132,7 @@
 .card {
   border: 2px solid var(--accent-color, rgb(0, 0, 0));
   background: var(--bg-color, rgb(255, 255, 255));
-  max-inline-size: 696px;
+  max-inline-size: 700px;
 }
 .card__image-wrapper {
   position: relative;
