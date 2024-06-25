@@ -315,7 +315,7 @@
 
 .modal {
   border: 2px solid var(--accent-color, rgb(0, 0, 0));
-  padding: 30px 40px;
+  padding: 30px;
   color: var(--accent-color, rgb(0, 0, 0));
   font-family: var(--accent-font, "PressStart2P"), fantasy;
   line-height: 1.5;
